@@ -1,65 +1,63 @@
+Program that enables time series analysis. It creates a time range plot selected by the user, displaying the time series along with trend line and moving average.
 
-Program, który umożliwia przeprowadzenie analizy szeregów czasowych. 
-Tworzy wykres z zakresu czasowego wybranego przez użytkownika, na którym przedstawione jest szereg czasowy oraz linia trendu i średnia krocząca. 
+Additional modules used in the project:
+- tkinter (console with selection)
+- yfinance
+- pandas
+- matplotlib
+- numpy
 
+1. Description:
+   - The program fetches data from Yahoo Finance concerning real estate, cryptocurrencies, and commodities prices. Based on the fetched data, it generates charts depicting price trends within a specified time interval.
+   
+2. Libraries: (exact versions are in the requirements file)
+   - tkinter: library for creating GUI,
+   - yfinance: library for fetching price data from Yahoo Finance,
+   - pandas: library for data analysis,
+   - matplotlib: library for creating plots,
+   - numpy: library for numerical array operations.
+   
+3. Graphical Interface:
+   - The program features a graphical interface based on the tkinter library.
+   - The program window consists of a title and buttons for selecting desired data.
 
-Dodatkowe moduły użyte w projekcie:
--tkinter (konsola z wyborem)
--yfinance
--pandas
--matplotlib
--numpy
+4. Functionality:
+   - After selecting the data, the program prompts for the start and end dates of the time interval to view price trends.
+   - Subsequently, the program fetches data from Yahoo Finance and generates a chart depicting price changes within the specified time range.
+   - The chart includes a moving average and a trend line.
 
+5. Scope of Operation:
+   - #real estate from 2013
+   - #coal from 2018
+   - #oil from 2002
+   - #gas from 2002
+   - #uranium from 2010
+   - #btc from 2015
 
+6. User Instructions:
+   - Running the Program:
+     - Run the file containing the program code.
+   - Selecting Data:
+     - Choose the desired data by clicking the appropriate button.
+   - Entering Dates:
+     - After selecting data, enter the start and end dates of the time interval.
+   - Generating the Chart:
+     - After entering dates, generate the chart by clicking the "Create Chart" button.
 
+Explanation of Operation:
+Functions like "coal", "gas", "oil", "uranium", "real estate", "btc" perform operations on the GUI (remove unnecessary buttons and add new ones [tkinter]). Upon their execution/call, the user is prompted to input the time interval of interest. Just below, there's also a "Create Chart" button generated, which triggers another function upon clicking.
 
-1.	Opis: 
-•	Program służy do pobierania danych z serwisu Yahoo Finance dotyczących cen nieruchomości, kryptowalut i surowców. Na podstawie pobranych danych program tworzy wykresy przedstawiające trendy cenowe w zadanym przedziale czasowym.
-2.	Biblioteki:(dokładne wersje znajdują się w pliku requirements)
-•	tkinter - biblioteka służąca do tworzenia GUI,
-•	yfinance - biblioteka służąca do pobierania danych o cenach z serwisu Yahoo Finance,
-•	pandas - biblioteka służąca do analizy danych,
-•	matplotlib - biblioteka służąca do tworzenia wykresów,
-•	numpy - biblioteka służąca do operacji na tablicach numerycznych.
-3.	Interfejs graficzny:
-•	Program posiada interfejs graficzny oparty na bibliotece tkinter.
-•	Okno programu składa się z tytułu oraz przycisków, które służą do wybierania interesujących nas danych.
-4.	Funkcjonalność: 
-•	Po wybraniu danych program prosi o podanie daty początkowej i końcowej przedziału czasowego, dla którego chcemy zobaczyć trend cenowy. 
-•	Następnie program pobiera dane z serwisu Yahoo Finance i tworzy wykres przedstawiający zmiany cen w danym przedziale czasowym. 
-•	Wykres zawiera również średnią kroczącą oraz linię trendu.
-5.Zakres działania:
-• #nieruchomosci od 2013
-• #wegiel od 2018
-• #ropa od 2002
-• #gaz od 2002
-• #uran od 2010
-• #btc od 2015
-6.	Instrukcja obsługi:
-•	Uruchomienie programu 
-	należy uruchomić plik zawierający kod programu.
-•	Wybór danych 
-	 należy wybrać interesujące nas dane poprzez kliknięcie na odpowiedni przycisk.
-•	Podanie daty 
-	 po wyborze danych program poprosi o podanie daty początkowej i końcowej przedziału czasowego.
-•	Wygenerowanie wykresu 
-	 po podaniu dat program można wygenerować wykres poprzez kliknięcie na przycisk "Stwórz wykres".
+Auxiliary function "commodities" performs operations on the GUI (removing and adding new buttons [tkinter]).
 
-Wyjaśnienie działania:
-Funkcje “węgiel”; “gaz”; “ropa”; “uran”; “nier”; “btc” - Wykonują operacje na GUI (usuwają niepotrzebne przyciski i dodają nowe [tkinter]). 
-Po ich uruchomieniu/wywołaniu użytkownik dostaje miejsce, w które powinien wpisać przedział czasowy, którym jest zainteresowany. 
-Tuż pod, wygenerowany jest również przycisk ,,Stwórz wykres”, po naciśnięciu którego wywołamy inną już funkcję.
+The main functions of the program are:
+- "coal_run"
+- "gas_run"
+- "oil_run"
+- "uranium_run"
+- "real_estate_run"
+- "btc_run"
 
-Pomocnicza funkcja “surowce” - operacje na GUI (usuwanie oraz dodawanie nowych przycisków [tkinter])
-
-Głównymi funkcjami programu są:
-“wegiel_uruchom”;
-“gaz_uruchom”;
-“ropa_uruchom”;
-“uran_uruchom”;
-“nier_uruchom”;
-“btc_uruchom”
-Powiązane z przyciskiem ,,Stwórz wykres”, które na podstawie zebranych danych od użytkownika oraz ‘yfinance’, przy pomocy bibliotek Pandas, Matplotlib oraz numpy, wykonują wszelkie obliczenia potrzebne do wytworzenia końcowego wykresu.
+These functions are associated with the "Create Chart" button. They utilize user-input data along with 'yfinance', using Pandas, Matplotlib, and numpy libraries to perform all necessary calculations for generating the final chart.
 
 
  
